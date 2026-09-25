@@ -1,0 +1,5275 @@
+/* ========================================
+   BASIC SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Arial,
+        sans-serif;
+
+    color: #173a67;
+    background: #ffffff;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e5edf3;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+.header-inner {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+
+.navigation {
+    display: flex;
+
+    gap: 25px;
+
+    margin-left: auto;
+
+    align-items: center;
+}
+
+
+.navigation a {
+    font-size: 13px;
+
+    color: #314f6d;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover {
+    color: #4b9bc2;
+}
+
+
+.language {
+    margin-left: 30px;
+
+    display: flex;
+
+    gap: 7px;
+
+    font-size: 11px;
+
+    color: #9baab6;
+}
+
+
+.language .active {
+    color: #173a67;
+}
+
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #f8fbfd 0%,
+            #eef7fb 55%,
+            #ffffff 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.hero-inner {
+    width: 90%;
+    max-width: 1300px;
+
+    min-height: 650px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        52% 48%;
+
+    align-items: end;
+}
+
+
+
+/* ========================================
+   HERO TEXT
+======================================== */
+
+.hero-content {
+    align-self: center;
+
+    padding: 60px 0 70px;
+}
+
+
+.hero-small {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #6f8da3;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-message {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+    color: #395c78;
+}
+
+
+.hero h1 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: clamp(55px, 6vw, 78px);
+
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    line-height: 1.2;
+}
+
+
+.english-name {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    margin-top: 8px;
+}
+
+
+.doctor-title {
+    font-size: 15px;
+
+    margin-top: 25px;
+
+    letter-spacing: 1px;
+}
+
+
+.hero-description {
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #566e82;
+}
+
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.main-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+
+    padding: 14px 22px;
+
+    background: #173a67;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+    background: #315f85;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* ========================================
+   DR. KOJI PHOTO
+======================================== */
+
+.hero-photo {
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+}
+
+
+.hero-photo img {
+    width: 100%;
+
+    max-width: 550px;
+
+    max-height: 620px;
+
+    object-fit: contain;
+
+    object-position: bottom center;
+}
+
+
+
+/* ========================================
+   TABLET / MOBILE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navigation {
+        display: none;
+    }
+
+
+    .language {
+        margin-left: auto;
+    }
+
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content {
+        padding-bottom: 20px;
+    }
+
+
+    .hero-photo {
+        height: auto;
+    }
+
+
+    .hero-photo img {
+        max-height: 500px;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+    }
+
+
+    .logo {
+        font-size: 14px;
+    }
+
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero-inner {
+        min-height: auto;
+    }
+
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero-message {
+        font-size: 17px;
+    }
+
+
+    .hero-description br {
+        display: none;
+    }
+
+}
+
+/* ========================================
+   CLICKABLE CARDS
+======================================== */
+
+.clickable {
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.clickable:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(23, 58, 103, 0.12);
+}
+
+
+
+/* ========================================
+   MODAL / POP-UP
+======================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+
+.modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+
+/* DARK BACKGROUND */
+
+.modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(13, 35, 55, 0.65);
+
+    backdrop-filter: blur(4px);
+}
+
+
+
+/* WHITE POP-UP */
+
+.modal-box {
+    position: relative;
+
+    z-index: 1;
+
+    width: 90%;
+
+    max-width: 850px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+}
+
+
+.modal.show .modal-box {
+    transform: translateY(0);
+}
+
+
+
+/* CLOSE BUTTON */
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    z-index: 5;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #173a67;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.modal-close:hover {
+    background: #173a67;
+
+    color: white;
+}
+
+
+
+/* PHOTO */
+
+.modal-image {
+    width: 100%;
+
+    max-height: 430px;
+
+    object-fit: cover;
+
+    background: #eef5f9;
+}
+
+
+
+/* CONTENT */
+
+.modal-content {
+    padding: 40px 50px 50px;
+}
+
+
+.modal-year {
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    color: #7390a6;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.modal-content h2 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    color: #173a67;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+.modal-conference {
+    margin-top: 12px;
+
+    color: #668094;
+
+    font-size: 14px;
+}
+
+
+.modal-line {
+    width: 50px;
+
+    height: 1px;
+
+    background: #77a9c5;
+
+    margin: 25px 0;
+}
+
+
+.modal-description {
+    color: #50697c;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .modal {
+        padding: 15px;
+    }
+
+
+    .modal-content {
+        padding: 30px 25px 35px;
+    }
+
+
+    .modal-content h2 {
+        font-size: 22px;
+    }
+
+
+    .modal-image {
+        max-height: 300px;
+    }
+
+}
+
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+.section-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+
+.section-number {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #173a67;
+}
+
+
+.section-en {
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #7793a8;
+
+    margin-bottom: 5px;
+}
+
+
+.section-heading h2 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* ========================================
+   PROFILE
+======================================== */
+
+.profile-section {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns:
+        300px 1fr 320px;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+
+/* PHOTO */
+
+.profile-photo {
+    overflow: hidden;
+}
+
+
+.profile-photo img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+
+
+/* PROFILE TEXT */
+
+.profile-text {
+    color: #536b7e;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+.profile-text p {
+    margin-bottom: 22px;
+}
+
+
+.profile-lead {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    color: #173a67;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* TEXT LINK */
+
+.text-link {
+    margin-top: 15px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color: #173a67;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #173a67;
+}
+
+
+.text-link span {
+    margin-left: 25px;
+}
+
+
+
+/* QUALIFICATIONS */
+
+.qualification-list {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.qualification-card {
+    min-height: 105px;
+
+    padding: 22px 25px;
+
+    border: 1px solid #dce8ef;
+
+    background: #fbfdff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.qualification-card span {
+    font-family: Georgia, serif;
+
+    color: #86a8bc;
+
+    font-size: 13px;
+}
+
+
+.qualification-card p {
+    color: #294b69;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+
+/* ========================================
+   PROFILE MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-photo {
+        max-width: 400px;
+    }
+
+
+    .profile-section {
+        padding: 70px 0;
+    }
+
+}
+
+/* ========================================
+   02 ACADEMIC PRESENTATIONS
+======================================== */
+
+.academic-section {
+    padding: 100px 0;
+    background: #f7fafc;
+}
+
+
+/* HEADING */
+
+.academic-heading {
+    justify-content: space-between;
+}
+
+
+.section-heading-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.view-all {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #173a67;
+
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a6bbc9;
+}
+
+
+.view-all span {
+    margin-left: 20px;
+}
+
+
+/* ========================================
+   FEATURED PRESENTATION
+======================================== */
+
+.featured-presentation {
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1eaf0;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.featured-presentation:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 45px rgba(23, 58, 103, 0.10);
+}
+
+
+/* PHOTO */
+
+.featured-photo {
+    overflow: hidden;
+}
+
+
+.featured-photo img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.featured-presentation:hover
+.featured-photo img {
+    transform: scale(1.025);
+}
+
+
+/* INFORMATION */
+
+.featured-info {
+    padding: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.presentation-year {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #7897ad;
+
+    margin-bottom: 15px;
+}
+
+
+.featured-info h3 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: 27px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    color: #173a67;
+}
+
+
+.conference {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #637b8e;
+}
+
+
+/* TAGS */
+
+.presentation-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.presentation-tags span {
+    background: #edf4f8;
+
+    color: #52718a;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+}
+
+
+/* DETAILS LINK */
+
+.presentation-link {
+    width: fit-content;
+
+    margin-top: 30px;
+
+    padding: 0 0 5px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+
+    background: none;
+
+    color: #173a67;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.presentation-link span {
+    margin-left: 25px;
+}
+
+
+/* ========================================
+   PRESENTATION CARDS
+======================================== */
+
+.presentation-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+
+.presentation-card {
+    background: #ffffff;
+
+    border: 1px solid #e1eaf0;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.presentation-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(23, 58, 103, 0.10);
+}
+
+
+.presentation-card img {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    transition: transform 0.4s;
+}
+
+
+.presentation-card:hover img {
+    transform: scale(1.03);
+}
+
+
+.presentation-card-content {
+    padding: 20px;
+}
+
+
+.card-year {
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    color: #7897ad;
+
+    margin-bottom: 7px;
+}
+
+
+.presentation-card h3 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #173a67;
+}
+
+
+.card-conference {
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #748897;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .featured-presentation {
+        grid-template-columns: 1fr;
+    }
+
+
+    .featured-photo img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+
+    .featured-info {
+        padding: 35px;
+    }
+
+
+    .presentation-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .academic-section {
+        padding: 70px 0;
+    }
+
+
+    .presentation-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .view-all {
+        display: none;
+    }
+
+
+    .featured-info {
+        padding: 30px 25px;
+    }
+
+
+    .featured-info h3 {
+        font-size: 22px;
+    }
+
+}
+
+/* ========================================
+   ACADEMIC MODAL
+======================================== */
+
+.academic-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+
+    /* Hidden by default */
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+
+/* SHOW MODAL */
+
+.academic-modal.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+
+/* ========================================
+   DARK BACKGROUND
+======================================== */
+
+.academic-modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(14, 39, 61, 0.72);
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+
+/* ========================================
+   WHITE POP-UP BOX
+======================================== */
+
+.academic-modal-box {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 950px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        55% 45%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.25);
+
+    transform:
+        translateY(25px)
+        scale(0.98);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+
+.academic-modal.show
+.academic-modal-box {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+
+/* ========================================
+   PHOTO
+======================================== */
+
+.academic-modal-photo {
+
+    min-height: 500px;
+
+    background: #edf4f8;
+
+}
+
+
+.academic-modal-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 500px;
+
+    object-fit: cover;
+
+}
+
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.academic-modal-content {
+
+    padding: 60px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+
+.academic-modal-label {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #86a3b7;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.academic-modal-year {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 26px;
+
+    color: #7897ad;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.academic-modal-content h2 {
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    letter-spacing: 1px;
+
+    color: #173a67;
+
+}
+
+
+
+.academic-modal-conference {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #617a8e;
+
+}
+
+
+
+.academic-modal-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #78a6bf;
+
+    margin: 28px 0;
+
+}
+
+
+
+.academic-modal-description {
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #536c7f;
+
+}
+
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.academic-modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    z-index: 10;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    color: #173a67;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.12);
+
+    transition: 0.25s;
+
+}
+
+
+
+.academic-modal-close:hover {
+
+    background: #173a67;
+
+    color: #ffffff;
+
+}
+
+
+
+/* ========================================
+   MOBILE MODAL
+======================================== */
+
+@media (max-width: 750px) {
+
+    .academic-modal {
+
+        padding: 15px;
+
+        align-items: flex-start;
+
+        overflow-y: auto;
+
+    }
+
+
+    .academic-modal-box {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        margin: 20px 0;
+
+        max-height: none;
+
+    }
+
+
+    .academic-modal-photo {
+
+        min-height: auto;
+
+    }
+
+
+    .academic-modal-photo img {
+
+        min-height: auto;
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+
+    .academic-modal-content {
+
+        padding: 35px 25px 40px;
+
+    }
+
+
+    .academic-modal-content h2 {
+
+        font-size: 21px;
+
+    }
+
+}
+
+/* ========================================
+   PORTFOLIO TWO COLUMN LAYOUT
+======================================== */
+
+.portfolio-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    width: 100%;
+
+    border-bottom: 1px solid #dfe8ee;
+
+}
+
+
+
+/* LEFT + RIGHT BORDER */
+
+.profile-section {
+
+    border-right:
+        1px solid #dfe8ee;
+
+}
+
+
+
+/* Make both sections fit the half-width layout */
+
+.portfolio-row
+.profile-section,
+
+.portfolio-row
+.academic-section {
+
+    padding:
+        55px 30px;
+
+}
+
+
+
+/* Containers should use available space */
+
+.portfolio-row
+.section-container {
+
+    width: 100%;
+
+    max-width: none;
+
+}
+
+
+
+/* ========================================
+   PROFILE - HALF WIDTH VERSION
+======================================== */
+
+.portfolio-row
+.profile-grid {
+
+    grid-template-columns:
+        170px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+}
+
+
+
+/* Qualifications go underneath */
+
+.portfolio-row
+.qualification-list {
+
+    grid-column:
+        1 / -1;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+
+
+.portfolio-row
+.qualification-card {
+
+    min-height: 120px;
+
+    padding: 18px 12px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 8px;
+
+}
+
+
+
+.portfolio-row
+.qualification-card p {
+
+    font-size: 12px;
+
+}
+
+
+
+/* PROFILE PHOTO */
+
+.portfolio-row
+.profile-photo img {
+
+    aspect-ratio: 3 / 4;
+
+}
+
+
+
+/* PROFILE LEAD */
+
+.portfolio-row
+.profile-lead {
+
+    font-size: 18px;
+
+}
+
+
+
+/* ========================================
+   ACADEMIC - HALF WIDTH VERSION
+======================================== */
+
+.portfolio-row
+.featured-presentation {
+
+    grid-template-columns:
+        58% 42%;
+
+}
+
+
+
+.portfolio-row
+.featured-photo img {
+
+    height: 270px;
+
+}
+
+
+
+.portfolio-row
+.featured-info {
+
+    padding: 25px;
+
+}
+
+
+
+.portfolio-row
+.featured-info h3 {
+
+    font-size: 18px;
+
+}
+
+
+
+.portfolio-row
+.presentation-year {
+
+    font-size: 20px;
+
+}
+
+
+
+.portfolio-row
+.presentation-tags {
+
+    margin-top: 15px;
+
+}
+
+
+
+.portfolio-row
+.presentation-link {
+
+    margin-top: 18px;
+
+}
+
+
+
+/* Small academic cards */
+
+.portfolio-row
+.presentation-grid {
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+}
+
+
+
+/* We only need 3 cards visible here */
+
+.portfolio-row
+.presentation-card:nth-child(4) {
+
+    display: none;
+
+}
+
+
+
+.portfolio-row
+.presentation-card-content {
+
+    padding: 10px;
+
+}
+
+
+
+.portfolio-row
+.card-year {
+
+    font-size: 14px;
+
+}
+
+
+
+.portfolio-row
+.presentation-card h3 {
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+
+.portfolio-row
+.card-conference {
+
+    font-size: 9px;
+
+}
+
+
+
+/* ========================================
+   SMALLER SECTION HEADINGS
+======================================== */
+
+.portfolio-row
+.section-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.portfolio-row
+.section-number {
+
+    font-size: 30px;
+
+}
+
+
+
+.portfolio-row
+.section-heading h2 {
+
+    font-size: 25px;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .portfolio-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-section {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #dfe8ee;
+
+    }
+
+
+    .portfolio-row
+    .profile-grid {
+
+        grid-template-columns:
+            200px 1fr;
+
+    }
+
+
+    .portfolio-row
+    .featured-photo img {
+
+        height: auto;
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .portfolio-row
+    .profile-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .portfolio-row
+    .qualification-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .portfolio-row
+    .featured-presentation {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .portfolio-row
+    .presentation-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ========================================
+   02 RESEARCH THEMES - BALANCED VERSION
+======================================== */
+
+.research-section {
+    padding: 55px 38px;
+    background: linear-gradient(
+        135deg,
+        #f7fbfd 0%,
+        #eef7fb 100%
+    );
+}
+
+.research-section .section-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.research-heading {
+    margin-bottom: 24px;
+}
+
+.research-intro {
+    max-width: 650px;
+    margin-bottom: 25px;
+    color: #60798c;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* 2 × 2 */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+/* Make cards shorter */
+.research-card {
+    position: relative;
+
+    height: 205px;
+
+    display: grid;
+    grid-template-columns: 56% 44%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #dce8ef;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(23, 58, 103, 0.09);
+}
+
+
+/* TEXT */
+
+.research-text {
+    position: relative;
+    z-index: 2;
+
+    padding: 22px 12px 20px 24px;
+}
+
+.research-number {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #79a0b8;
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.research-en {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #8aa7ba;
+
+    font-size: 7px;
+    line-height: 1.3;
+    letter-spacing: 1.4px;
+
+    margin-bottom: 7px;
+}
+
+.research-card h3 {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    color: #173a67;
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+
+    word-break: keep-all;
+}
+
+.research-description {
+    color: #61798b;
+
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+
+/* IMAGE */
+
+.research-image {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.research-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.35) 0%,
+            rgba(255,255,255,0) 35%
+        );
+
+    pointer-events: none;
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.research-card:hover .research-image img {
+    transform: scale(1.04);
+}
+
+
+/* ARROW */
+
+.research-arrow {
+    position: absolute;
+
+    right: 14px;
+    bottom: 12px;
+
+    z-index: 5;
+
+    color: #173a67;
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+.research-card:hover .research-arrow {
+    transform: translateX(4px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-card {
+        height: 210px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .research-section {
+        padding: 50px 25px;
+    }
+
+    .research-card {
+        height: 210px;
+        grid-template-columns: 55% 45%;
+    }
+
+    .research-text {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   03 ACADEMIC PRESENTATIONS
+======================================== */
+
+.academic-section {
+    padding: 75px 55px 85px;
+    background: #ffffff;
+    border-top: 1px solid #dfe8ee;
+}
+
+.academic-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.academic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 22px;
+}
+
+.academic-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 0 0 6px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+
+    background: transparent;
+
+    color: #173a67;
+
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+}
+
+.academic-all-link span {
+    transition: transform 0.3s ease;
+}
+
+.academic-all-link:hover span {
+    transform: translateX(5px);
+}
+
+
+.academic-intro {
+    max-width: 750px;
+
+    margin: 0 0 40px 70px;
+
+    color: #60798c;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* ========================================
+   FEATURED PRESENTATION - COMPACT
+======================================== */
+
+.academic-featured {
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    height: 360px;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #dce8ef;
+
+    background: #f3f8fb;
+}
+
+
+/* PHOTO */
+
+.academic-featured-image {
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #eef3f6;
+}
+
+
+.academic-featured-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /* keeps people's heads visible */
+    object-position: center 30%;
+
+    transition: transform 0.5s ease;
+}
+
+
+.academic-featured:hover
+.academic-featured-image img {
+    transform: scale(1.015);
+}
+
+
+/* FEATURED LABEL */
+
+.academic-featured-label {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 13px;
+
+    background: rgba(255,255,255,0.94);
+
+    color: #173a67;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* RIGHT SIDE */
+
+.academic-featured-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px 48px;
+}
+
+
+/* YEAR */
+
+.academic-year {
+    margin: 0 0 10px;
+
+    color: #7da4bb;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+}
+
+
+/* CATEGORY */
+
+.academic-category {
+    margin: 0 0 10px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TITLE */
+
+.academic-featured-content h3 {
+    margin: 0 0 13px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    letter-spacing: 1px;
+}
+
+
+/* CONFERENCE */
+
+.academic-conference {
+    margin: 0 0 10px;
+
+    color: #536f84;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* DESCRIPTION */
+
+.academic-description {
+    max-width: 460px;
+
+    margin: 0 0 16px;
+
+    color: #718696;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+}
+
+
+/* DETAIL BUTTON */
+
+.academic-detail-link {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 0 0 5px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+
+    background: transparent;
+
+    color: #173a67;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.academic-detail-link span {
+    transition: transform 0.3s ease;
+}
+
+
+.academic-detail-link:hover span {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   SMALL PRESENTATIONS
+======================================== */
+
+.academic-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.academic-card {
+    display: grid;
+
+    grid-template-columns: 52% 48%;
+
+    min-height: 220px;
+
+    overflow: hidden;
+
+    border: 1px solid #dce8ef;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.academic-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(23,58,103,0.08);
+}
+
+
+/* CARD IMAGE */
+
+.academic-card-image {
+    overflow: hidden;
+}
+
+.academic-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.academic-card:hover
+.academic-card-image img {
+    transform: scale(1.04);
+}
+
+
+/* CARD TEXT */
+
+.academic-card-content {
+    position: relative;
+
+    padding: 25px 22px;
+}
+
+.academic-card-year {
+    margin-bottom: 28px;
+
+    color: #80a6bd;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+}
+
+.academic-card-content h3 {
+    margin: 0 0 15px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+.academic-card-content > p:last-of-type {
+    color: #718696;
+
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.academic-card-arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 18px;
+
+    color: #173a67;
+
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+.academic-card:hover
+.academic-card-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .academic-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-featured-image {
+        min-height: 380px;
+    }
+
+    .academic-list {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-card {
+        grid-template-columns: 45% 55%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .academic-section {
+        padding: 55px 25px 65px;
+    }
+
+    .academic-header {
+        display: block;
+    }
+
+    .academic-all-link {
+        margin-top: 25px;
+    }
+
+    .academic-intro {
+        margin:
+            25px 0
+            30px;
+    }
+
+    .academic-featured-image {
+        min-height: 280px;
+    }
+
+    .academic-featured-content {
+        padding: 35px 28px;
+    }
+
+    .academic-featured-content h3 {
+        font-size: 22px;
+    }
+
+    .academic-card {
+        grid-template-columns: 45% 55%;
+        min-height: 190px;
+    }
+}
+
+/* ========================================
+   ACADEMIC ARCHIVE MODAL
+======================================== */
+
+.archive-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+}
+
+
+/* OPEN STATE */
+
+.archive-modal.active {
+    display: block;
+}
+
+
+/* DARK BACKGROUND */
+
+.archive-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        rgba(20, 43, 66, 0.45);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* MAIN WINDOW */
+
+.archive-window {
+    position: absolute;
+
+    top: 4vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1200px;
+
+    height: 92vh;
+
+    overflow-y: auto;
+
+    padding: 55px 75px 65px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 70px
+        rgba(18, 48, 75, 0.18);
+}
+
+
+/* CLOSE */
+
+.archive-close {
+    position: absolute;
+
+    top: 24px;
+    right: 30px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    color: #173a67;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 30px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.archive-header {
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.archive-en {
+    margin:
+        0 0
+        10px;
+
+    color: #82a5ba;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.archive-header h2 {
+    margin:
+        0 0
+        18px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+.archive-description {
+    margin: 0;
+
+    color: #718696;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+
+
+/* ========================================
+   YEAR GROUP
+======================================== */
+
+.archive-year-group {
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.archive-year {
+    color: #7fa5bc;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+}
+
+
+
+/* ========================================
+   ITEMS
+======================================== */
+
+.archive-items {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.archive-item {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 10px 20px;
+
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 1px solid #e5edf2;
+
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.archive-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.archive-item-text {
+    flex: 1;
+}
+
+
+.archive-category {
+    display: block;
+
+    margin-bottom:
+        8px;
+
+    color: #8aa8ba;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 7px;
+
+    letter-spacing: 1.7px;
+}
+
+
+.archive-item h3 {
+    margin:
+        0 0
+        9px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+.archive-item p {
+    margin: 0;
+
+    color: #718696;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+.archive-arrow {
+    color: #173a67;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.archive-item:hover
+.archive-arrow {
+    transform:
+        translateX(5px);
+}
+
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .archive-window {
+        top: 2vh;
+
+        width:
+            calc(100% - 24px);
+
+        height: 96vh;
+
+        padding:
+            55px 25px
+            60px;
+    }
+
+
+    .archive-close {
+        top: 15px;
+        right: 15px;
+    }
+
+
+    .archive-year-group {
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+    }
+
+
+    .archive-year {
+        font-size: 22px;
+    }
+
+
+    .archive-item {
+        padding:
+            0 0
+            22px;
+    }
+
+}
+
+/* ========================================
+   PRESENTATION DETAIL
+======================================== */
+
+.academic-detail {
+    display: none;
+}
+
+/* ========================================
+   ACADEMIC PRESENTATION DETAIL
+======================================== */
+
+
+/* BACK BUTTON */
+
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0 0 35px;
+
+    padding: 0 0 6px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+
+    background: transparent;
+
+    color: #173a67;
+
+    font-size: 10px;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   TITLE AREA
+======================================== */
+
+.detail-top {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    gap: 40px;
+
+    align-items: end;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.detail-category {
+    margin: 0 0 10px;
+
+    color: #82a5ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+.detail-year {
+    margin: 0;
+
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+}
+
+
+.detail-top h2 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   PHOTO
+======================================== */
+
+.detail-image {
+    width: 100%;
+
+    height: 430px;
+
+    margin: 35px 0;
+
+    overflow: hidden;
+
+    background: #f2f6f8;
+}
+
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #f2f6f8;
+}
+
+
+/* ========================================
+   BOTTOM INFORMATION
+======================================== */
+
+.detail-bottom {
+    display: grid;
+
+    grid-template-columns: 1fr 1.15fr;
+
+    gap: 55px;
+
+    padding-bottom: 30px;
+}
+
+
+/* LEFT INFORMATION */
+
+.detail-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid #dce8ef;
+    border-left: 1px solid #dce8ef;
+}
+
+
+.detail-info > div {
+    min-height: 105px;
+
+    padding: 20px;
+
+    border-right: 1px solid #dce8ef;
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.detail-info span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.detail-info p {
+    margin: 0;
+
+    color: #173a67;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* RIGHT DESCRIPTION */
+
+.detail-about {
+    padding: 5px 10px;
+}
+
+
+.detail-about-en {
+    margin: 0 0 10px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.detail-about h3 {
+    margin: 0 0 20px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+}
+
+
+.detail-about #detailDescription {
+    margin: 0;
+
+    color: #60798c;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .detail-back {
+        margin-bottom: 25px;
+    }
+
+
+    .detail-top {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .detail-top h2 {
+        font-size: 21px;
+    }
+
+
+    .detail-image {
+        height: 260px;
+
+        margin: 25px 0;
+    }
+
+
+    .detail-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .detail-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   04 PUBLICATIONS
+========================================= */
+
+.publications-section {
+    padding: 95px 0 105px;
+    background: #ffffff;
+}
+
+
+/* ========================================
+   HEADER
+========================================= */
+
+.publications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+
+    margin-bottom: 22px;
+}
+
+
+.publications-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+
+.publications-heading .section-number {
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.publications-heading .section-en {
+    margin: 0 0 8px;
+
+    color: #82a5ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+}
+
+
+.publications-heading h2 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+/* VIEW ALL */
+
+.publications-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+
+    padding: 0 0 6px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+
+    background: transparent;
+
+    color: #173a67;
+
+    font-size: 9px;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+}
+
+
+.publications-all span {
+    font-size: 14px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.publications-all:hover span {
+    transform: translateX(5px);
+}
+
+
+/* INTRO */
+
+.publications-intro {
+    max-width: 600px;
+
+    margin: 0 0 55px;
+    padding-left: 68px;
+
+    color: #718696;
+
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   PUBLICATION LIST
+========================================= */
+
+.publication-list {
+    border-top: 1px solid #dce8ef;
+}
+
+
+.publication-item {
+    display: grid;
+
+    grid-template-columns: 100px 55px 1fr 40px;
+
+    gap: 28px;
+
+    align-items: center;
+
+    min-height: 175px;
+
+    padding: 30px 12px;
+
+    border-bottom: 1px solid #dce8ef;
+
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease;
+}
+
+
+/* subtle hover */
+
+.publication-item:hover {
+    padding-left: 22px;
+    padding-right: 22px;
+
+    background: #f7fafc;
+}
+
+
+/* ========================================
+   YEAR
+========================================= */
+
+.publication-year {
+    align-self: flex-start;
+
+    padding-top: 4px;
+
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+}
+
+
+/* ========================================
+   NUMBER
+========================================= */
+
+.publication-number {
+    align-self: flex-start;
+
+    padding-top: 7px;
+
+    color: #a7bdca;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   CONTENT
+========================================= */
+
+.publication-content {
+    max-width: 760px;
+}
+
+
+.publication-category {
+    margin: 0 0 9px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.publication-content h3 {
+    margin: 0 0 15px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.65;
+    letter-spacing: 0.6px;
+}
+
+
+.publication-authors {
+    margin: 0 0 5px;
+
+    color: #4f687b;
+
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+
+.publication-journal {
+    margin: 0;
+
+    color: #8294a1;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   ARROW
+========================================= */
+
+.publication-arrow {
+    color: #173a67;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+
+.publication-item:hover .publication-arrow {
+    transform: translate(4px, -4px);
+}
+
+
+/* ========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .publications-section {
+        padding: 70px 0 80px;
+    }
+
+
+    .publications-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    .publications-heading {
+        gap: 20px;
+    }
+
+
+    .publications-heading .section-number {
+        font-size: 25px;
+    }
+
+
+    .publications-heading h2 {
+        font-size: 23px;
+    }
+
+
+    .publications-intro {
+        margin-bottom: 40px;
+
+        padding-left: 0;
+    }
+
+
+    .publication-item {
+        position: relative;
+
+        grid-template-columns: 65px 1fr;
+
+        gap: 8px 18px;
+
+        min-height: auto;
+
+        padding: 28px 5px;
+    }
+
+
+    .publication-item:hover {
+        padding: 28px 5px;
+
+        background: transparent;
+    }
+
+
+    .publication-year {
+        grid-column: 1;
+        grid-row: 1;
+
+        font-size: 18px;
+    }
+
+
+    .publication-number {
+        display: none;
+    }
+
+
+    .publication-content {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+    .publication-content h3 {
+        padding-right: 25px;
+
+        font-size: 15px;
+    }
+
+
+    .publication-arrow {
+        position: absolute;
+
+        top: 30px;
+        right: 4px;
+    }
+
+}
+
+/* ========================================
+   05 BOOKS
+========================================= */
+
+.books-section {
+    padding: 95px 0 110px;
+    background: #f5f9fc;
+}
+
+
+/* HEADER */
+
+.books-header {
+    margin-bottom: 20px;
+}
+
+
+.books-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+
+.books-heading .section-number {
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+.books-heading .section-en {
+    margin: 0 0 8px;
+
+    color: #82a5ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+}
+
+
+.books-heading h2 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+.books-intro {
+    margin: 0 0 55px;
+    padding-left: 68px;
+
+    color: #718696;
+
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   LABEL
+========================================= */
+
+.books-label {
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.books-label span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+
+.books-label p {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   MAIN BOOKS
+========================================= */
+
+.books-featured {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    margin-bottom: 90px;
+}
+
+
+.book-card {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* COVER */
+
+.book-cover {
+    width: 190px;
+    height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(23, 58, 103, 0.08);
+}
+
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* BOOK INFORMATION */
+
+.book-info {
+    padding-top: 5px;
+}
+
+
+.book-year {
+    margin-bottom: 12px;
+
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+}
+
+
+.book-type {
+    margin: 0 0 10px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.book-info h3 {
+    margin: 0 0 12px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 19px;
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.7px;
+}
+
+
+.book-subtitle {
+    margin: -4px 0 15px;
+
+    color: #60798c;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.book-author {
+    margin: 0 0 5px;
+
+    color: #4f687b;
+
+    font-size: 9px;
+}
+
+
+.book-date {
+    margin: 0 0 18px;
+
+    color: #8294a1;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+.book-description {
+    margin: 0;
+
+    color: #718696;
+
+    font-size: 9px;
+
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   CONTRIBUTIONS
+========================================= */
+
+.book-contributions {
+    display: grid;
+
+    grid-template-columns: 210px 1fr;
+
+    gap: 55px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid #dce8ef;
+}
+
+
+.contributions-en {
+    margin: 0 0 8px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.contributions-heading h3 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* CONTRIBUTION LIST */
+
+.contribution-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 45px;
+
+    border-top: 1px solid #dce8ef;
+}
+
+
+.contribution-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 18px;
+
+    padding: 18px 5px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+
+.contribution-year {
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+}
+
+
+.contribution-content h4 {
+    margin: 0 0 7px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+.contribution-content p {
+    margin: 0;
+
+    color: #718696;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+}
+
+
+.contribution-content .contribution-title {
+    margin-bottom: 4px;
+
+    color: #536f84;
+}
+
+
+/* ========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .books-section {
+        padding: 70px 0 80px;
+    }
+
+
+    .books-heading {
+        gap: 20px;
+    }
+
+
+    .books-heading .section-number {
+        font-size: 25px;
+    }
+
+
+    .books-heading h2 {
+        font-size: 23px;
+    }
+
+
+    .books-intro {
+        padding-left: 0;
+
+        margin-bottom: 45px;
+    }
+
+
+    .books-featured {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        margin-bottom: 70px;
+    }
+
+
+    .book-card {
+        grid-template-columns: 130px 1fr;
+
+        gap: 25px;
+    }
+
+
+    .book-cover {
+        width: 130px;
+        height: 190px;
+
+        padding: 8px;
+    }
+
+
+    .book-year {
+        font-size: 18px;
+    }
+
+
+    .book-info h3 {
+        font-size: 16px;
+    }
+
+
+    .book-description {
+        display: none;
+    }
+
+
+    .book-contributions {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .contribution-item {
+        grid-template-columns: 60px 1fr;
+
+        gap: 15px;
+    }
+
+    .contribution-list {
+    grid-template-columns: 1fr;
+}
+
+}
+
+/* ========================================
+   BOOK PURCHASE LINK
+========================================= */
+
+.book-purchase-link {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+
+    margin-top: 20px;
+    padding: 0 0 6px;
+
+    border-bottom: 1px solid #173a67;
+
+    color: #173a67;
+
+    font-size: 9px;
+    letter-spacing: 0.4px;
+
+    text-decoration: none;
+}
+
+
+.book-purchase-link span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.book-purchase-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* ========================================
+   FIX BOOKS EXCESS SPACE
+========================================= */
+
+.books-featured {
+    height: auto;
+    min-height: 0;
+
+    align-items: start;
+
+    margin-bottom: 55px;
+}
+
+
+.book-card {
+    height: auto;
+    min-height: 0;
+
+    align-self: start;
+}
+
+
+.book-contributions {
+    margin-top: 0;
+}
+
+/* ========================================
+   NEW HERO
+========================================= */
+
+.hero-new {
+    position: relative;
+
+    width: 100%;
+    height: 680px;
+
+    overflow: hidden;
+
+    background: #eef5f9;
+}
+
+
+/* ========================================
+   BACKGROUND PHOTO
+========================================= */
+
+.hero-new-photo {
+    position: absolute;
+    inset: 0;
+}
+
+
+.hero-new-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /* keeps doctor near center */
+    object-position: center center;
+}
+
+
+/* ========================================
+   SOFT WHITE / BLUE OVERLAY
+========================================= */
+
+.hero-new-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.97) 0%,
+            rgba(255,255,255,0.90) 23%,
+            rgba(255,255,255,0.20) 43%,
+            rgba(239,247,252,0.05) 60%,
+            rgba(232,243,250,0.82) 100%
+        );
+}
+
+
+/* ========================================
+   HERO CONTENT
+========================================= */
+
+.hero-new-inner {
+    position: relative;
+    z-index: 2;
+
+    width: calc(100% - 100px);
+    max-width: 1450px;
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 35% 1fr 30%;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   LEFT SIDE
+========================================= */
+
+.hero-new-left {
+    grid-column: 1;
+
+    padding-top: 10px;
+}
+
+
+.hero-new-message {
+    margin: 0 0 18px;
+
+    color: #536f84;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-new-left h1 {
+    margin: 0 0 4px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 52px;
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    letter-spacing: 5px;
+}
+
+
+.hero-new-name {
+    margin: 0 0 20px;
+
+    color: #173a67;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    letter-spacing: 1.8px;
+}
+
+
+.hero-new-profile {
+    color: #536f84;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.hero-new-profile p {
+    margin: 0 0 3px;
+}
+
+
+.hero-new-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #173a67;
+}
+
+
+.hero-new-description {
+    margin: 0 0 22px;
+
+    color: #526d80;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+
+/* BUTTON */
+
+.hero-new-button {
+    width: 155px;
+    height: 43px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: #173a67;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.hero-new-button:hover {
+    background: #24527d;
+
+    transform: translateY(-2px);
+}
+
+
+.hero-new-button span {
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RIGHT SIDE
+========================================= */
+
+.hero-new-right {
+    grid-column: 3;
+
+    justify-self: end;
+
+    width: 280px;
+}
+
+
+.hero-new-philosophy {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-new-short-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 28px 0 60px;
+
+    background: #173a67;
+}
+
+
+.hero-new-keywords {
+    margin: 0;
+
+    color: #536f84;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-new {
+        height: 720px;
+    }
+
+
+    .hero-new-photo img {
+        object-position: 57% center;
+    }
+
+
+    .hero-new-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,0.97) 0%,
+                rgba(255,255,255,0.87) 48%,
+                rgba(238,246,251,0.40) 100%
+            );
+    }
+
+
+    .hero-new-inner {
+        width: calc(100% - 40px);
+
+        display: block;
+
+        padding-top: 70px;
+    }
+
+
+    .hero-new-left {
+        width: 75%;
+    }
+
+
+    .hero-new-left h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-new-name {
+        font-size: 14px;
+    }
+
+
+    .hero-new-right {
+        position: absolute;
+
+        right: 0;
+        bottom: 35px;
+
+        width: 190px;
+    }
+
+
+    .hero-new-philosophy {
+        font-size: 17px;
+    }
+
+
+    .hero-new-short-line {
+        margin: 18px 0 25px;
+    }
+
+}
+
+/* ========================================
+   01 PROFILE — BALANCE WITH 02 RESEARCH
+========================================= */
+
+/* Match the horizontal spacing of Research */
+.portfolio-row .profile-section {
+    padding: 55px 38px;
+}
+
+
+/* Slightly larger portrait + wider text area */
+.portfolio-row .profile-grid {
+    grid-template-columns: 185px 1fr;
+    column-gap: 28px;
+    row-gap: 0;
+    align-items: start;
+}
+
+
+/* Portrait */
+.portfolio-row .profile-photo {
+    width: 185px;
+}
+
+.portfolio-row .profile-photo img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+
+/* Main profile statement */
+.portfolio-row .profile-lead {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+
+/* Body text */
+.portfolio-row .profile-text {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.portfolio-row .profile-text p {
+    margin-bottom: 20px;
+}
+
+
+/* Detail link */
+.portfolio-row .text-link {
+    margin-top: 18px;
+}
+
+
+/* Credentials fill the lower area more naturally */
+.portfolio-row .qualification-list {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 38px;
+}
+
+
+/* Make credential cards closer in visual weight
+   to the research cards */
+.portfolio-row .qualification-card {
+    min-height: 125px;
+
+    padding: 20px 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: center;
+}
+
+
+/* Credential number */
+.portfolio-row .qualification-card span {
+    font-size: 13px;
+}
+
+
+/* Credential text */
+.portfolio-row .qualification-card p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* Keep both 01 and 02 aligned at the top */
+.portfolio-row .profile-section,
+.portfolio-row .research-section {
+    min-height: 680px;
+}
+
+/* Final balance adjustment for 01 */
+
+.portfolio-row .qualification-list {
+    margin-top: 48px;
+}
+
+.portfolio-row .qualification-card {
+    min-height: 140px;
+}
+
+/* ========================================
+   PROFILE LINKS
+========================================= */
+
+.profile-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 18px;
+}
+
+.profile-links .text-link {
+    margin-top: 0;
+}
+
+/* ========================================
+   PROFILE MODAL
+========================================= */
+
+.profile-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+}
+
+.profile-modal.active {
+    display: block;
+}
+
+.profile-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(20, 43, 66, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+.profile-modal-window {
+    position: absolute;
+
+    top: 5vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 60px 70px 70px;
+
+    background: #ffffff;
+
+    box-shadow: 0 20px 70px rgba(18, 48, 75, 0.18);
+}
+
+.profile-modal-close {
+    position: absolute;
+
+    top: 22px;
+    right: 28px;
+
+    border: none;
+    background: transparent;
+
+    color: #173a67;
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.profile-modal-header {
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+.profile-modal-en {
+    margin: 0 0 8px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+}
+
+.profile-modal-header h2 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 700px) {
+
+    .profile-modal-window {
+        top: 2vh;
+
+        width: calc(100% - 24px);
+        height: 96vh;
+
+        padding: 55px 25px 50px;
+    }
+
+}
+
+/* ========================================
+   PROFILE MODAL — INNER LAYOUT
+========================================= */
+
+.profile-modal-window {
+    box-sizing: border-box;
+}
+
+/* Two columns */
+.profile-modal .profile-detail-content {
+    display: grid !important;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+
+    width: 100%;
+    padding-top: 10px;
+}
+
+
+/* COLUMN HEADINGS */
+
+.profile-modal .profile-detail-en {
+    margin: 0 0 8px;
+
+    color: #82a5ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+}
+
+.profile-modal .profile-detail-column h3 {
+    margin: 0 0 28px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   CAREER
+========================================= */
+
+.profile-modal .career-list {
+    width: 100%;
+
+    border-top: 1px solid #dce8ef;
+}
+
+.profile-modal .career-row {
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+
+    padding: 19px 5px;
+
+    border-bottom: 1px solid #dce8ef;
+}
+
+.profile-modal .career-row span {
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+}
+
+.profile-modal .career-row p {
+    margin: 0;
+
+    color: #314e67;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.profile-modal .career-row small {
+    color: #718696;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   QUALIFICATIONS
+========================================= */
+
+.profile-modal .qualification-detail-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    border-top: 1px solid #dce8ef;
+}
+
+.profile-modal .qualification-detail-list li {
+    position: relative;
+
+    margin: 0;
+    padding: 14px 8px 14px 22px;
+
+    border-bottom: 1px solid #dce8ef;
+
+    color: #314e67;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.profile-modal .qualification-detail-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    top: 22px;
+
+    width: 4px;
+    height: 4px;
+
+    background: #82a5ba;
+}
+
+.profile-modal .qualification-detail-list small {
+    color: #718696;
+
+    font-size: 10px;
+}
+
+
+/* ========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .profile-modal .profile-detail-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .profile-modal .career-row {
+        grid-template-columns: 75px 1fr;
+        gap: 15px;
+    }
+
+}
+
+/* ========================================
+   RESEARCH CARD INTERACTION
+========================================= */
+
+.research-card {
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(23, 58, 103, 0.08);
+    border-color: #b9cfdd;
+}
+
+.research-card .research-image img {
+    transition: transform 0.5s ease;
+}
+
+.research-card:hover .research-image img {
+    transform: scale(1.025);
+}
+
+.research-card .research-arrow {
+    transition: transform 0.3s ease;
+}
+
+.research-card:hover .research-arrow {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   RESEARCH THEME MODAL
+========================================= */
+
+.research-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.research-modal.active {
+    display: block;
+}
+
+.research-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 43, 66, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+.research-modal-window {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    height: 90vh;
+
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    padding: 55px 65px 65px;
+
+    background: #ffffff;
+    box-shadow: 0 20px 70px rgba(18, 48, 75, 0.18);
+}
+
+.research-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    border: none;
+    background: transparent;
+
+    color: #173a67;
+    font-family: Georgia, serif;
+    font-size: 30px;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+.research-modal-back {
+    margin: 0 0 35px;
+    padding: 0 0 6px;
+
+    border: none;
+    border-bottom: 1px solid #173a67;
+    background: transparent;
+
+    color: #173a67;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+}
+
+
+/* TOP */
+
+.research-detail-top {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 35px;
+    align-items: end;
+
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dce8ef;
+}
+
+.research-detail-number {
+    margin: 0 0 8px;
+
+    color: #7fa5bc;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+}
+
+.research-detail-en {
+    margin: 0;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.research-detail-top h2 {
+    margin: 0;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+/* MAIN */
+
+.research-detail-main {
+    display: grid;
+    grid-template-columns: 46% 1fr;
+    gap: 55px;
+
+    margin-top: 35px;
+}
+
+
+/* IMAGE */
+
+.research-detail-image {
+    width: 100%;
+    height: 430px;
+
+    overflow: hidden;
+    background: #f3f8fc;
+}
+
+.research-detail-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+
+/* DESCRIPTION */
+
+.research-detail-description {
+    margin: 0 0 35px;
+
+    color: #526d82;
+
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+
+/* RESEARCH FOCUS */
+
+.research-focus {
+    padding-top: 25px;
+    border-top: 1px solid #dce8ef;
+}
+
+.research-focus-en {
+    margin: 0 0 7px;
+
+    color: #8aa8ba;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.research-focus h3 {
+    margin: 0 0 18px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#researchDetailFocus {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#researchDetailFocus li {
+    position: relative;
+
+    padding: 10px 0 10px 18px;
+
+    border-bottom: 1px solid #e5edf2;
+
+    color: #526d82;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+#researchDetailFocus li::before {
+    content: "";
+
+    position: absolute;
+    left: 1px;
+    top: 18px;
+
+    width: 4px;
+    height: 4px;
+
+    background: #82a5ba;
+}
+
+
+/* BOTTOM LINK */
+
+.research-detail-link {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 220px;
+
+    margin-top: 30px;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid #173a67;
+
+    color: #173a67;
+    text-decoration: none;
+
+    font-size: 11px;
+}
+
+.research-detail-link span {
+    margin-left: 30px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .research-modal-window {
+        top: 2vh;
+
+        width: calc(100% - 24px);
+        height: 96vh;
+
+        padding: 55px 25px 50px;
+    }
+
+    .research-detail-top {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .research-detail-top h2 {
+        font-size: 23px;
+    }
+
+    .research-detail-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .research-detail-image {
+        height: 280px;
+    }
+}
