@@ -5273,3 +5273,117 @@ a {
         height: 280px;
     }
 }
+
+/* ========================================
+   03 ACADEMIC — TEXT CARDS
+========================================= */
+
+.academic-text-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.academic-text-card {
+    min-height: 285px;
+    background: #ffffff;
+    border: 1px solid #dde7ee;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.academic-text-card .academic-card-content {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 26px 22px 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.academic-text-card .academic-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding-bottom: 15px;
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #dde7ee;
+
+    color: #86a5b9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+}
+
+.academic-text-card h3 {
+    margin: 0 0 20px;
+
+    color: #173a67;
+
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        Georgia,
+        serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.academic-text-card .academic-card-content > p {
+    margin: auto 0 0;
+
+    color: #718696;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+.academic-text-card .academic-arrow {
+    display: block;
+    margin-top: 20px;
+
+    color: #173a67;
+    font-family: Georgia, serif;
+    font-size: 17px;
+
+    transition: transform 0.3s ease;
+}
+
+.academic-text-card:hover {
+    transform: translateY(-4px);
+    border-color: #b9cfdd;
+    box-shadow: 0 12px 30px rgba(23, 58, 103, 0.08);
+}
+
+.academic-text-card:hover .academic-arrow {
+    transform: translateX(5px);
+}
+
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+    .academic-text-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .academic-text-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-text-card {
+        min-height: auto;
+    }
+
+}
